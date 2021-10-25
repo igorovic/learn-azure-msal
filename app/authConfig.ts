@@ -4,6 +4,7 @@ export const msalConfig: Configuration = {
   auth: {
     clientId: String(process.env.NEXT_PUBLIC_AZURE_CLIENT_ID),
     authority: `https://${process.env.NEXT_PUBLIC_TENANT_NAME}.b2clogin.com/${process.env.NEXT_PUBLIC_TENANT_NAME}.onmicrosoft.com/${process.env.NEXT_PUBLIC_USER_FLOW}`,
+    //authority: "https://login.microsoft.com/common",
     knownAuthorities: [`${process.env.NEXT_PUBLIC_TENANT_NAME}.b2clogin.com`],
     redirectUri: "http://localhost:3000/",
     postLogoutRedirectUri: "http://localhost:3000",
